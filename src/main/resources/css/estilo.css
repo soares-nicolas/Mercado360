@@ -1,0 +1,55 @@
+.root {
+    -fx-font-family: "Arial";
+    -fx-background-color: #F6F0E6;
+    -fx-font-size: 14px;
+}
+
+.label {
+    -fx-text-fill: #573820;
+}
+
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: #D9C8B5;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 10;
+}
+
+.combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #D9C8B5;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+.button {
+    -fx-background-color: #7D4C2E;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #4A7654;
+}
+
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #D9C8B5;
+    -fx-border-radius: 6;
+}
+
+.table-view .column-header {
+    -fx-background-color: #E9DCCB;
+}
+
+.table-view .column-header .label {
+    -fx-font-weight: bold;
+}
+
+#labelStatus {
+    -fx-text-fill: #4A7654;
+}

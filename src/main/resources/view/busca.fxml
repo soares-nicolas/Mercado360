@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            prefWidth="950" prefHeight="650"
+            stylesheets="@../css/estilo.css">
+
+    <top>
+        <VBox spacing="8">
+            <padding>
+                <Insets top="20" right="25" bottom="20" left="25"/>
+            </padding>
+            <Label text="Mercado360"/>
+            <Label text="Encontre produtos e bancas no Mercado Central de Teresina"/>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="15">
+            <padding>
+                <Insets top="20" right="25" bottom="20" left="25"/>
+            </padding>
+
+            <Label text="Buscar produtos"/>
+
+            <HBox spacing="10">
+                <TextField fx:id="campoPesquisa"
+                           promptText="Digite o nome do produto"
+                           HBox.hgrow="ALWAYS"/>
+
+                <ComboBox fx:id="filtroCategoria"
+                          promptText="Todas as categorias"
+                          prefWidth="190"/>
+
+                <Button fx:id="botaoPesquisar"
+                        text="Pesquisar"/>
+            </HBox>
+
+            <Label text="Resultados da pesquisa"/>
+
+            <TableView fx:id="tabelaResultados"
+                       VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="colunaProduto"
+                                 text="Produto" prefWidth="180"/>
+                    <TableColumn fx:id="colunaCategoria"
+                                 text="Categoria" prefWidth="150"/>
+                    <TableColumn fx:id="colunaPreco"
+                                 text="Preço" prefWidth="110"/>
+                    <TableColumn fx:id="colunaBanca"
+                                 text="Banca" prefWidth="210"/>
+                    <TableColumn fx:id="colunaLocalizacao"
+                                 text="Localização" prefWidth="210"/>
+                </columns>
+                <placeholder>
+                    <Label text="Nenhum resultado. Pesquise um produto."/>
+                </placeholder>
+            </TableView>
+
+            <Label fx:id="labelStatus"
+                   text="Digite um produto para iniciar a pesquisa."/>
+        </VBox>
+    </center>
+</BorderPane>
