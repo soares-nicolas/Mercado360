@@ -1,0 +1,166 @@
+/* MERCADO360 - IDENTIDADE VISUAL */
+
+.root {
+    -fx-font-family: "Segoe UI", "Arial";
+    -fx-font-size: 14px;
+    -fx-background-color: #F7F3EC;
+    -fx-accent: #4C7857;
+}
+
+/* TEXTOS */
+
+.label {
+    -fx-text-fill: #513725;
+}
+
+.brand-title {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.brand-subtitle {
+    -fx-font-size: 13px;
+    -fx-text-fill: #F3E4D7;
+}
+
+.section-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #513725;
+}
+
+/* PAINEIS */
+
+.app-header {
+    -fx-background-color: #70452B;
+}
+
+.search-panel {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-border-color: #E4D8CB;
+    -fx-border-radius: 12;
+}
+
+/* CAMPO DE PESQUISA */
+
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: #D7C6B5;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 12;
+    -fx-font-size: 14px;
+}
+
+.text-field:focused {
+    -fx-border-color: #4C7857;
+    -fx-border-width: 2;
+}
+
+/* FILTROS */
+
+.combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #D7C6B5;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-pref-height: 42;
+}
+
+.combo-box:focused {
+    -fx-border-color: #4C7857;
+}
+
+/* BOTOES */
+
+.button {
+    -fx-background-color: #70452B;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-padding: 12 22;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #4C7857;
+}
+
+.button:pressed {
+    -fx-background-color: #36583F;
+}
+
+.secondary-button {
+    -fx-background-color: #EDE5DB;
+    -fx-text-fill: #513725;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #DBCFBF;
+}
+
+/* TABELA DE PRODUTOS */
+
+.table-view {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-color: #DED1C2;
+    -fx-border-radius: 10;
+    -fx-padding: 2;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #E9DCCD;
+}
+
+.table-view .column-header,
+.table-view .filler {
+    -fx-background-color: #E9DCCD;
+    -fx-pref-height: 42;
+}
+
+.table-view .column-header .label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #513725;
+}
+
+.table-row-cell {
+    -fx-cell-size: 42px;
+    -fx-background-color: white;
+    -fx-border-color: transparent transparent #EEE7DF transparent;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #FBF8F4;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #F0E7DA;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #DCEBDD;
+}
+
+.table-row-cell:selected .text {
+    -fx-fill: #294A33;
+}
+
+.table-cell {
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 8;
+}
+
+/* MENSAGENS E RESULTADOS */
+
+#labelStatus {
+    -fx-text-fill: #3E7250;
+    -fx-font-weight: bold;
+}
+
+.result-count {
+    -fx-text-fill: #3E7250;
+    -fx-font-weight: bold;
+}
