@@ -14,64 +14,149 @@
 <BorderPane xmlns="http://javafx.com/javafx/21"
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.mercado360.controller.BuscaController"
-            prefWidth="950" prefHeight="650"
+            prefWidth="950"
+            prefHeight="650"
             stylesheets="@../css/estilo.css">
 
+    <!-- CABEÇALHO -->
+
     <top>
-        <VBox spacing="8">
+        <VBox styleClass="app-header" spacing="6">
+
             <padding>
-                <Insets top="20" right="25" bottom="20" left="25"/>
+                <Insets top="24" right="30"
+                        bottom="24" left="30"/>
             </padding>
-            <Label text="Mercado360"/>
-            <Label text="Encontre produtos e bancas no Mercado Central de Teresina"/>
+
+            <Label text="Mercado360"
+                   styleClass="brand-title"/>
+
+            <Label text="Seu guia de compras no Mercado Central de Teresina"
+                   styleClass="brand-subtitle"/>
+
         </VBox>
     </top>
 
+    <!-- CONTEÚDO PRINCIPAL -->
+
     <center>
-        <VBox spacing="15">
+        <VBox spacing="18">
+
             <padding>
-                <Insets top="20" right="25" bottom="20" left="25"/>
+                <Insets top="24" right="30"
+                        bottom="30" left="30"/>
             </padding>
 
-            <Label text="Buscar produtos"/>
+            <!-- APRESENTAÇÃO -->
 
-            <HBox spacing="10">
-                <TextField fx:id="campoPesquisa"
-                           promptText="Digite o nome do produto"
-                           HBox.hgrow="ALWAYS"/>
+            <VBox spacing="6">
 
-                <ComboBox fx:id="filtroCategoria"
-                          promptText="Todas as categorias"
-                          prefWidth="190"/>
+                <Label text="Encontre seu produto"
+                       styleClass="section-title"/>
 
-                <Button fx:id="botaoPesquisar"
-                        text="Pesquisar"
-                        onAction="#pesquisar"/>
+                <Label text="Pesquise produtos, compare preços e encontre a localização das bancas."/>
+
+            </VBox>
+
+            <!-- PAINEL DE PESQUISA -->
+
+            <VBox styleClass="search-panel"
+                  spacing="14">
+
+                <padding>
+                    <Insets top="20" right="20"
+                            bottom="20" left="20"/>
+                </padding>
+
+                <Label text="Buscar produtos"
+                       style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+
+                <HBox spacing="12"
+                      alignment="CENTER_LEFT">
+
+                    <!-- CAMPO DE PESQUISA -->
+
+                    <TextField fx:id="campoPesquisa"
+                               promptText="Digite o nome do produto..."
+                               accessibleText="Pesquisar produto pelo nome"
+                               onAction="#pesquisar"
+                               HBox.hgrow="ALWAYS"/>
+
+                    <!-- FILTRO DE CATEGORIAS -->
+
+                    <ComboBox fx:id="filtroCategoria"
+                              promptText="Todas as categorias"
+                              accessibleText="Filtrar produtos por categoria"
+                              prefWidth="190"/>
+
+                    <!-- BOTÃO PESQUISAR -->
+
+                    <Button fx:id="botaoPesquisar"
+                            text="Pesquisar"
+                            onAction="#pesquisar"/>
+
+                    <!-- BOTÃO LIMPAR -->
+
+                    <Button fx:id="botaoLimpar"
+                            text="Limpar"
+                            styleClass="secondary-button"
+                            onAction="#limpar"/>
+
+                </HBox>
+            </VBox>
+
+            <!-- TÍTULO DOS RESULTADOS -->
+
+            <HBox alignment="CENTER_LEFT"
+                  spacing="12">
+
+                <Label text="Produtos encontrados"
+                       styleClass="section-title"/>
+
             </HBox>
 
-            <Label text="Resultados da pesquisa"/>
+            <!-- TABELA DE PRODUTOS -->
 
             <TableView fx:id="tabelaResultados"
-                       VBox.vgrow="ALWAYS">
+                       VBox.vgrow="ALWAYS"
+                       accessibleText="Tabela com os produtos encontrados">
+
                 <columns>
+
                     <TableColumn fx:id="colunaProduto"
-                                 text="Produto" prefWidth="180"/>
+                                 text="Produto"
+                                 prefWidth="175"/>
+
                     <TableColumn fx:id="colunaCategoria"
-                                 text="Categoria" prefWidth="150"/>
+                                 text="Categoria"
+                                 prefWidth="135"/>
+
                     <TableColumn fx:id="colunaPreco"
-                                 text="Preço" prefWidth="110"/>
+                                 text="Preço"
+                                 prefWidth="110"/>
+
                     <TableColumn fx:id="colunaBanca"
-                                 text="Banca" prefWidth="210"/>
+                                 text="Banca"
+                                 prefWidth="195"/>
+
                     <TableColumn fx:id="colunaLocalizacao"
-                                 text="Localização" prefWidth="210"/>
+                                 text="Localização"
+                                 prefWidth="220"/>
+
                 </columns>
+
                 <placeholder>
-                    <Label text="Nenhum resultado. Pesquise um produto."/>
+                    <Label text="Nenhum produto encontrado. Faça uma pesquisa para começar."/>
                 </placeholder>
+
             </TableView>
 
+            <!-- STATUS DA PESQUISA -->
+
             <Label fx:id="labelStatus"
-                   text="Digite um produto para iniciar a pesquisa."/>
+                   text="Digite um produto ou selecione uma categoria para pesquisar."/>
+
         </VBox>
     </center>
+
 </BorderPane>
